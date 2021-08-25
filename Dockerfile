@@ -38,4 +38,4 @@ CMD ["zsh"]
 
 RUN git config --global init.defaultBranch main
 RUN git config --global user.name "gitgitWi"
-RUN git config --global user.email "johnwi@knou.ac.kr"
+RUN git config --global user.email "gitgitWi@gmail.com"
