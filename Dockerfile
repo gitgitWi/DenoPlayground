@@ -22,7 +22,7 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
 COPY ./setup/.zshrc /root/.zshrc
 SHELL [ "/bin/zsh", "source", "~/.zshrc" ]
 
-RUN chmod +777 /workspaces/deno-tutorials/setup/install_asdf.sh
+RUN chmod -R 777 /workspaces/deno-tutorials/setup/install_asdf.sh
 # RUN /workspaces/deno-tutorials/setup/install_asdf.sh
 
 CMD ["zsh"]
