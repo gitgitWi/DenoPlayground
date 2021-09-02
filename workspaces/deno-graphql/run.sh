@@ -1,0 +1,1 @@
+deno run --allow-read --allow-net ./workspaces/deno-graphql/app.ts
