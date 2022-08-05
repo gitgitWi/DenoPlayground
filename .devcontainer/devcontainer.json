@@ -1,36 +1,53 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.241.1/containers/deno
 {
-  "name": "Existing Dockerfile",
+  "name": "Deno",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick an Debian OS version: bullseye, buster
+    "args": {
+      "VARIANT": "bullseye"
+    }
+  },
+  
+  "postStartCommand": "zsh",
 
-  "context": "..",
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        // Enables the project as a Deno project
+        "deno.enable": true,
+        // Enables Deno linting for the project
+        "deno.lint": true,
+        // Sets Deno as the default formatter for the project
+        "editor.defaultFormatter": "denoland.vscode-deno"
+      },
 
-  "dockerFile": "../Dockerfile",
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "denoland.vscode-deno",
+        "dsznajder.es7-react-js-snippets",
+        "streetsidesoftware.code-spell-checker",
+        "kisstkondoros.vscode-codemetrics",
+        "naumovs.color-highlight",
+        "dbaeumer.vscode-eslint",
+        "mhutchie.git-graph",
+        "GitHub.vscode-pull-request-github",
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "fabiospampinato.vscode-highlight",
+        "wix.vscode-import-cost",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "esbenp.prettier-vscode",
+        "mutantdino.resourcemonitor",
+        "WakaTime.vscode-wakatime"
+      ]
+    }
+  },
 
-  "settings": {},
-
-  "extensions": [
-	"naumovs.color-highlight",
-	"fabiospampinato.vscode-highlight",
-	"dbaeumer.vscode-eslint",
-	"steoates.autoimport",
-	"vscode-icons-team.vscode-icons",
-	"ms-vscode.vscode-typescript-next",
-	"dsznajder.es7-react-js-snippets",
-	"mikestead.dotenv",
-	"formulahendry.auto-rename-tag",
-	"coenraads.bracket-pair-colorizer-2",
-	"mhutchie.git-graph",
-	"codezombiech.gitignore",
-	"eamodio.gitlens",
-	"wix.vscode-import-cost",
-	"oderwat.indent-rainbow",
-	"esbenp.prettier-vscode",
-	"rvest.vs-code-prettier-eslint",
-	"mutantdino.resourcemonitor",
-	"syler.sass-indented",
-	"gencer.html-slim-scss-css-class-completion",
-	"mrmlnc.vscode-scss",
-	"visualstudioexptteam.vscodeintellicode",
-	"rangav.vscode-thunder-client",
-	"denoland.vscode-deno"
-]
+  "remoteUser": "vscode"
 }
