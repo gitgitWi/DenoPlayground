@@ -6,6 +6,7 @@
     "shd101wyy.markdown-preview-enhanced",
     "christian-kohler.path-intellisense",
     "foxundermoon.shell-format",
-    "rangav.vscode-thunder-client"
+    "rangav.vscode-thunder-client",
+    "denoland.vscode-deno"
   ]
 }
